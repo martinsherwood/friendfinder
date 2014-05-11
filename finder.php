@@ -42,16 +42,18 @@ $membership -> confirmMember();
             </div>
             
             <div id="user-actions">
-                <div class="action locate">Locate Me<i class="fa fa-location-arrow"></i></div>
+                <div class="action update-location">Update Location<i class="fa fa-location-arrow"></i></div>
                 
                 <div class="action camera">Camera/Photos<i class="fa fa-camera-retro"></i></div>
                 
-                <div class="action refresh">Refresh<i class="fa fa-refresh"></i></div>
+                <div class="action refresh">Refresh Friends<i class="fa fa-refresh"></i></div>
             </div>
             
             <!--
             	to do:
                 -------
+                
+                IMPORTANT: check the functions that locate and update the locations in hte database to make sure they fire when needed
                 
                 1. display location of friends on the map in realtime (timed ajax requests)
                 

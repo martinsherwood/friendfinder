@@ -945,9 +945,10 @@ textarea {
 #user-actions .action {
   width: 32%;
   height: 60px;
+  position: relative;
   float: left;
   margin-right: 1%;
-  /*padding-left: 6px;*/
+  padding-left: .4rem;
   line-height: 60px;
   background: #00adef;
   color: #fffffa;
@@ -966,6 +967,11 @@ textarea {
 }
 #user-actions .action:hover {
   opacity: .85;
+}
+#user-actions .action i {
+  font-size: 2.5rem;
+  margin: .6rem .6rem 0 0;
+  float: right;
 }
 
 .site-footer {

@@ -6,7 +6,7 @@
                     <a href="finder.php">Home</a>
                     <a href="#">Friends</a>
                     <a href="#">Photos</a>
-                    <a href="index.php?status=logout">Logout</a>
+                    <a href="index.php?status=logout" class="logout">Logout</a>
                 </nav>
             </header>
               
