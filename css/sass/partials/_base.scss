@@ -1,0 +1,71 @@
+html, body {
+	height: 100%;
+}
+
+html {
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	   -moz-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+			text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	   -moz-font-smoothing: antialiased;
+		-ms-font-smoothing: antialiased;
+		 -o-font-smoothing: antialiased;
+			font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+}
+
+body {
+	background: url("../img/background-fabric.png") top left scroll repeat $white;
+	color: $black;
+	font-family: $baseFamily;
+	font-size: $baseSize;
+	font-style: $baseStyle;
+	font-weight: $baseWeight;
+	line-height: 1.30;
+}
+
+audio, canvas, img, video {
+    vertical-align: middle;
+}
+
+p, ul, li {
+	font-size: $baseSize;
+	margin: .6rem 0;
+}
+
+a {
+	color: #ff2a7e;
+	text-decoration: none;
+}
+
+h1, h2 {
+	margin: 0 0 .8rem 0;
+	font-family: $headingFamily;
+	font-style: $headingStyle;
+	font-weight: $headingWeight;
+}
+
+h1 {
+	font-size: $headingBaseSize;
+}
+
+h2 {
+	font-size: $headingBaseSize - .40rem;
+}
+
+::-moz-selection {
+    background: hsla(0, 0%, 20%, 1);
+	color: hsla(60, 100%, 99%, 1);
+    text-shadow: none;
+}
+
+::selection {
+    background: hsla(0, 0%, 20%, 1);
+	color: hsla(60, 100%, 99%, 1);
+    text-shadow: none;
+}

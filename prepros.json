@@ -1,0 +1,242 @@
+{
+  "id": "5778a3ec",
+  "cfgVersion": 1,
+  "name": "friendfinder",
+  "files": {
+    "50ef0fa9": {
+      "id": "50ef0fa9",
+      "pid": "5778a3ec",
+      "name": "main.js",
+      "input": "js\\main.js",
+      "customOutput": false,
+      "type": "Js",
+      "config": {
+        "autoCompile": false,
+        "uglify": true,
+        "mangle": true,
+        "sourcemaps": false
+      }
+    },
+    "d6dc2db1": {
+      "id": "d6dc2db1",
+      "pid": "5778a3ec",
+      "name": "plugins.js",
+      "input": "js\\plugins.js",
+      "customOutput": false,
+      "type": "Js",
+      "config": {
+        "autoCompile": false,
+        "uglify": true,
+        "mangle": true,
+        "sourcemaps": false
+      }
+    },
+    "7c23f569": {
+      "id": "7c23f569",
+      "pid": "5778a3ec",
+      "name": "main.scss",
+      "input": "css\\sass\\main.scss",
+      "customOutput": "css\\main.css",
+      "type": "Scss",
+      "config": {
+        "autoCompile": true,
+        "lineNumbers": false,
+        "unixNewlines": false,
+        "sourcemaps": true,
+        "debug": false,
+        "compass": false,
+        "fullCompass": false,
+        "outputStyle": "expanded",
+        "autoprefixer": false
+      }
+    },
+    "d4bc434e": {
+      "id": "d4bc434e",
+      "pid": "5778a3ec",
+      "name": "admin.scss",
+      "input": "css\\sass\\admin.scss",
+      "customOutput": "css\\admin.css",
+      "type": "Scss",
+      "config": {
+        "autoCompile": true,
+        "lineNumbers": false,
+        "unixNewlines": false,
+        "sourcemaps": true,
+        "debug": false,
+        "compass": false,
+        "fullCompass": false,
+        "outputStyle": "expanded",
+        "autoprefixer": false
+      }
+    }
+  },
+  "imports": {
+    "84597581": {
+      "id": "84597581",
+      "pid": "5778a3ec",
+      "path": "css\\sass\\partials\\_base.scss",
+      "parents": [
+        "7c23f569"
+      ]
+    },
+    "0dd6b665": {
+      "id": "0dd6b665",
+      "pid": "5778a3ec",
+      "path": "css\\sass\\defaults\\_normalize.scss",
+      "parents": [
+        "7c23f569"
+      ]
+    },
+    "b2f13fcf": {
+      "id": "b2f13fcf",
+      "pid": "5778a3ec",
+      "path": "css\\sass\\defaults\\_vars.scss",
+      "parents": [
+        "7c23f569"
+      ]
+    },
+    "ed97a1f6": {
+      "id": "ed97a1f6",
+      "pid": "5778a3ec",
+      "path": "css\\sass\\defaults\\_mixins.scss",
+      "parents": [
+        "7c23f569"
+      ]
+    },
+    "09d6abfa": {
+      "id": "09d6abfa",
+      "pid": "5778a3ec",
+      "path": "css\\sass\\partials\\_layout.scss",
+      "parents": [
+        "7c23f569"
+      ]
+    },
+    "8d9e09de": {
+      "id": "8d9e09de",
+      "pid": "5778a3ec",
+      "path": "css\\sass\\partials\\_forms.scss",
+      "parents": [
+        "7c23f569"
+      ]
+    },
+    "b1721e8e": {
+      "id": "b1721e8e",
+      "pid": "5778a3ec",
+      "path": "css\\sass\\partials\\_helpers.scss",
+      "parents": [
+        "7c23f569"
+      ]
+    },
+    "b6074ecf": {
+      "id": "b6074ecf",
+      "pid": "5778a3ec",
+      "path": "css\\sass\\partials\\_home.scss",
+      "parents": [
+        "7c23f569"
+      ]
+    },
+    "d4d7a55f": {
+      "id": "d4d7a55f",
+      "pid": "5778a3ec",
+      "path": "css\\sass\\partials\\_header.scss",
+      "parents": [
+        "7c23f569"
+      ]
+    }
+  },
+  "images": {
+    "0596b443": {
+      "id": "0596b443",
+      "pid": "5778a3ec",
+      "path": "img\\location-pin-blue.png",
+      "size": 24199,
+      "name": "location-pin-blue.png",
+      "type": "Png",
+      "initialSize": 24199,
+      "status": "NOT_OPTIMIZED"
+    },
+    "e6559593": {
+      "id": "e6559593",
+      "pid": "5778a3ec",
+      "path": "img\\location-pin-green.png",
+      "size": 16728,
+      "name": "location-pin-green.png",
+      "type": "Png",
+      "initialSize": 16728,
+      "status": "NOT_OPTIMIZED"
+    },
+    "1b36d66a": {
+      "id": "1b36d66a",
+      "pid": "5778a3ec",
+      "path": "img\\location-pin-orange.png",
+      "size": 24631,
+      "name": "location-pin-orange.png",
+      "type": "Png",
+      "initialSize": 24631,
+      "status": "NOT_OPTIMIZED"
+    },
+    "59fc3cf0": {
+      "id": "59fc3cf0",
+      "pid": "5778a3ec",
+      "path": "img\\location-pin-pink.png",
+      "size": 24631,
+      "name": "location-pin-pink.png",
+      "type": "Png",
+      "initialSize": 24631,
+      "status": "NOT_OPTIMIZED"
+    },
+    "f3f59cc1": {
+      "id": "f3f59cc1",
+      "pid": "5778a3ec",
+      "path": "img\\location-pin-red.png",
+      "size": 24538,
+      "name": "location-pin-red.png",
+      "type": "Png",
+      "initialSize": 24538,
+      "status": "NOT_OPTIMIZED"
+    },
+    "0ea1a8ce": {
+      "id": "0ea1a8ce",
+      "pid": "5778a3ec",
+      "path": "img\\background-fabric.png",
+      "size": 28425,
+      "name": "background-fabric.png",
+      "type": "Png",
+      "initialSize": 28425,
+      "status": "NOT_OPTIMIZED"
+    }
+  },
+  "config": {
+    "watch": true,
+    "liveRefresh": true,
+    "liveRefreshDelay": 0,
+    "filterPatterns": "",
+    "useCustomServer": false,
+    "customServerUrl": "",
+    "cssPath": "css/",
+    "jsPath": "js/",
+    "htmlPath": "html/",
+    "minJsPath": "min/",
+    "htmlExtension": ".html",
+    "cssPathType": "REPLACE_TYPE",
+    "htmlPathType": "REPLACE_TYPE",
+    "jsPathType": "REPLACE_TYPE",
+    "minJsPathType": "RELATIVE_FILEDIR",
+    "htmlTypes": "jade, haml, slim, markdown, md",
+    "cssTypes": "less, sass, stylus, scss, styl",
+    "jsTypes": "coffee, coffeescript, coffeescripts, ls, livescript, livescripts",
+    "cssPreprocessorPath": "",
+    "htmlPreprocessorPath": "",
+    "jsPreprocessorPath": "",
+    "minJsPreprocessorPath": "",
+    "autoprefixerBrowsers": "",
+    "ftpHost": "",
+    "ftpPort": "21",
+    "ftpRemotePath": "",
+    "ftpIgnorePreprocessorFiles": true,
+    "ftpType": "FTP",
+    "ftpExcludePatterns": "",
+    "ftpPassword": "",
+    "ftpUsername": ""
+  }
+}
