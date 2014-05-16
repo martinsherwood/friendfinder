@@ -15,7 +15,7 @@ $membership -> confirmMember(); //calls the confirm member function that checks 
         <link rel="dns-prefetch" href="//netdna.bootstrapcdn.com">
         
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Friend Finder</title>
+        <title>User Locations</title>
         <meta name="description" content="University of Gloucestershire, Park Campus, Friend Finder App">
         <meta name="viewport" content="width=device-width, minimum-scale=1.0">
         
@@ -36,25 +36,10 @@ $membership -> confirmMember(); //calls the confirm member function that checks 
         	
             <?php include_once "includes/header.php" ?>
             
-        	<h1>User Map</h1>
+        	<h1>User Locations</h1>
             
-            <div id="user-map">
-            </div>
-            
-            <div id="user-actions">
-                <div class="action update-location"><span>Update Location</span><i class="fa fa-location-arrow"></i></div>
-                
-                <div class="action drop-pin">Drop Pin<i class="fa fa-map-marker"></i></div>
-                
-                <div class="action upload-photos">Upload Photos<i class="fa fa-camera-retro"></i></div>
-                
-                <div class="action refresh-users">Refresh Users<i class="fa fa-refresh"></i></div>
-            </div>
-            
-            <div id="users-list">
-            	<h2>List</h2>
-            	<ul class="users">
-                </ul>
+            <h2>Usernames</h2>
+            <div class="user-locations">
             </div>
              
         </div><!--/wrapper-->
@@ -64,6 +49,6 @@ $membership -> confirmMember(); //calls the confirm member function that checks 
 		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC6n-3I8KfH6ReeERae16W5M8B1QtzjPGc&sensor=true"></script>
 		<script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/finder.js"></script>
+        <script src="js/users.js"></script>
     </body>
 </html>

@@ -7,15 +7,18 @@
 	
 	if (isset($_POST)) {
 		
+		//sanitise inputs
 		$username = htmlentities($_POST["username"], ENT_QUOTES);
 		$useremail = htmlentities($_POST["useremail"], ENT_QUOTES);
 		$userpassword = htmlentities($_POST["userpassword"], ENT_QUOTES);
 		
+		//server side check for blank inputs
 		if ($username == "" || $useremail == "" || $userpassword == "") {
 			return false;
 			header("location: index.php");
 		}
 		
+		//escape characters
 		$username = $db -> real_escape_string($username);
 		$useremail = $db -> real_escape_string($useremail);
 		$userpassword = $db -> real_escape_string($userpassword);

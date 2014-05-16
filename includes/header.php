@@ -4,8 +4,8 @@
                 <nav class="main-menu">
                 	<h2>Menu:</h2>
                     <a href="finder.php">Home</a>
-                    <a href="#">Friends</a>
-                    <a href="#">Photos</a>
+                    <a href="users.php">Users</a>
+                    <a href="photos.php">Photos</a>
                     <a href="index.php?status=logout" class="logout">Logout</a>
                 </nav>
             </header>

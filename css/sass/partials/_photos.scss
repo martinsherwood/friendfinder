@@ -1,0 +1,126 @@
+#upload-photo {
+	position: relative;
+	margin-bottom: $bottomSpacing;
+	
+		input {
+			width: 100%;
+			margin-bottom: $bottomSpacing;
+		}
+	
+		.upload-button {
+			width: 100%;
+			height: 60px;
+			position: relative;
+			padding-left: .4rem;
+			line-height: 60px;
+			background: $black;
+			color: $white;
+			@include no-select;
+			cursor: pointer;
+			
+				&:hover {
+					@include tapped;
+				}
+			
+				i {
+					font-size: 2.5rem;
+					margin: .7rem .6rem 0 0;
+					float: right;
+				}
+		}
+}
+
+#error {
+	color: #ff2a7e;
+}
+
+#photo-roll {
+	position: relative;
+	
+		> h1 {
+			display: inline-block;
+			
+				@include breakpoint(mobile) {
+					display: block;
+				}
+		}
+	
+		.upload-more {
+			width: 160px;
+			height: 50px;
+			display: inline-block;
+			position: relative;
+			float: right;
+			padding-left: .4rem;
+			line-height: 50px;
+			background: $black;
+			color: $white;
+			@include no-select;
+			cursor: pointer;
+			
+				i {
+					font-size: 2.2rem;
+					margin: .6rem .6rem 0 0;
+					float: right;
+				}
+				
+				&:hover {
+					@include tapped;
+				}
+				
+				@include clearfix;
+				
+				@include breakpoint(mobile) {
+					display: block;
+					float: none;
+					margin-bottom: $bottomSpacing;
+				}
+		}
+		
+		.photos {
+			position: relative;
+			margin-top: .4rem;
+			@include clearfix;
+			
+				.entry {
+					width: 49%;
+					position: relative;
+					border: 3px solid $white;
+					margin-bottom: 2%;
+					float: left;
+					
+						&:nth-of-type(odd) {
+							margin-right: 2%;
+						}
+						
+						@include breakpoint(mobile) {
+							width: 100%;
+							float: none;
+							margin-right: 0;
+						}
+			
+						div.img {
+							max-width: 100%;
+							height: 300px;
+							position: relative;
+							display: block;
+							
+								.by {
+									width: 100%;
+									height: 50px;
+									line-height: 50px;
+									position: absolute;
+									bottom: 0;
+									padding: 0 .5rem;
+									background: hsla(0,0%,0%,0.80);
+									font-size: $baseSize - .6rem;
+									color: $white;
+									
+										span {
+											color: lighten($grey, 5%);
+										}
+								}
+						}
+				}
+		}
+}

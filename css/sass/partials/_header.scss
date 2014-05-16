@@ -5,6 +5,10 @@
 	border-bottom: 1px solid $grey;
 	margin-bottom: .8rem;
 	
+		@include breakpoint(mobile) {
+			height: 100px;
+		}
+	
 		.main-menu {
 			width: 100%;
 			height: 100px;
@@ -19,12 +23,25 @@
 			-ms-transition: all 0.3s ease;
 			transition: all 0.3s ease;
 			
+				@include breakpoint(mobile) {
+					height: 333px;
+					top: -333px;
+				}
+			
 				h2 {
 					width: 20%;
 					float: left;
-					padding: 4%;
+					padding: 2rem;
 					color: $white;
 					margin: 0;
+					
+						@include breakpoint(mobile) {
+							float: none;
+							width: 100%;
+							height: auto;
+							padding: 1rem;
+							border-bottom: 1px solid $white;
+						}
 				}
 				
 				a {
@@ -33,12 +50,25 @@
 					color: $white;
 					float: left;
 					width: 20%;
-					padding: 4%;
+					padding: 2rem;
 					border-left: 1px solid $white;
 					text-align: center;
 					
 						&:hover {
 							background: #258ecd;
+						}
+						
+						@include breakpoint(mobile) {
+							float: none;
+							width: 100%;
+							height: auto;
+							padding: 1rem;
+							border-left: none;
+							border-bottom: 1px solid $white;
+							
+								&:last-of-type {
+									border-bottom: none;
+								}
 						}
 				}
 		}
@@ -51,11 +81,21 @@
 			float: right;
 			line-height: 60px;
 			font-size: $baseSize - .3rem;
+			
+				@include breakpoint(mobile) {
+					float: none;
+					margin-top: 46px;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
 		}
 		
 		.username {
 			text-transform: uppercase;
 		}
+		
+	@include clearfix;
 }
 
 #menu-button {
@@ -84,5 +124,9 @@
 }
 
 .push-down {
-	top: 100px !important;
+	top: 98px !important;
+	
+		@include breakpoint(mobile) {
+			top: 331px !important;
+		}
 }

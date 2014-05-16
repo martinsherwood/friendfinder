@@ -15,7 +15,7 @@ $membership -> confirmMember(); //calls the confirm member function that checks 
         <link rel="dns-prefetch" href="//netdna.bootstrapcdn.com">
         
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Friend Finder</title>
+        <title>Upload a Photo</title>
         <meta name="description" content="University of Gloucestershire, Park Campus, Friend Finder App">
         <meta name="viewport" content="width=device-width, minimum-scale=1.0">
         
@@ -34,28 +34,28 @@ $membership -> confirmMember(); //calls the confirm member function that checks 
     
         <div id="wrapper" class="inner-wrap">
         	
-            <?php include_once "includes/header.php" ?>
+        	<?php include_once "includes/header.php" ?>
             
-        	<h1>User Map</h1>
+        	<h1>Upload a Photo</h1>
             
-            <div id="user-map">
-            </div>
-            
-            <div id="user-actions">
-                <div class="action update-location"><span>Update Location</span><i class="fa fa-location-arrow"></i></div>
+            <form id="upload-photo" action="functions/uploadphoto.php" method="post" enctype="multipart/form-data">
+            	<label for="image">Choose or Take a Photo</label>
+            	<input name="image" id="image" type="file" required><!--add multiple attribute to allow multiple image uploads at once, out of scope here as we are using captions-->
                 
-                <div class="action drop-pin">Drop Pin<i class="fa fa-map-marker"></i></div>
+                <label for="caption">Caption</label>
+                <input type="text" id="caption" name="caption" placeholder="Enter a caption" maxlength="120" required>
                 
-                <div class="action upload-photos">Upload Photos<i class="fa fa-camera-retro"></i></div>
+                <input type="hidden" id="username" name="username"> <!--hidden username field, value is inserted into database with filename and caption-->
                 
-                <div class="action refresh-users">Refresh Users<i class="fa fa-refresh"></i></div>
-            </div>
+                <div class="upload-button">Upload<i class="fa fa-cloud-upload"></i></div>
+            </form>
             
-            <div id="users-list">
-            	<h2>List</h2>
-            	<ul class="users">
-                </ul>
-            </div>
+            <?php
+				if (isset($_SESSION["error"])) {
+					echo "<span id=\"error\">" . $_SESSION["error"] . "</span>";
+					unset($_SESSION["error"]);
+				}
+			?>
              
         </div><!--/wrapper-->
         
@@ -64,6 +64,6 @@ $membership -> confirmMember(); //calls the confirm member function that checks 
 		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC6n-3I8KfH6ReeERae16W5M8B1QtzjPGc&sensor=true"></script>
 		<script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/finder.js"></script>
+        
     </body>
 </html>

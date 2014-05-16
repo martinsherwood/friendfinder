@@ -8,11 +8,9 @@
 	if (isset($_POST)) {
 		
 		$username = $_POST["username"];
-		$longitude = $_POST["longitude"];
-		$latitude = $_POST["latitude"];
 		
-		if ($stmt = $db -> prepare("UPDATE user_locations SET latitude = ?, longitude = ? WHERE username = ?")) { //
-			$stmt -> bind_param("sss", $latitude, $longitude, $username);
+		if ($stmt = $db -> prepare("INSERT INTO user_locations (username) VALUES (?)")) {
+			$stmt -> bind_param("s", $username);
 			$stmt -> execute();
 			$stmt -> close();
 		} else {

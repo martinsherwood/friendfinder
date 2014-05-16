@@ -68,9 +68,45 @@
         "outputStyle": "expanded",
         "autoprefixer": false
       }
+    },
+    "8704e8de": {
+      "id": "8704e8de",
+      "pid": "5778a3ec",
+      "name": "finder.js",
+      "input": "js\\finder.js",
+      "customOutput": false,
+      "type": "Js",
+      "config": {
+        "autoCompile": false,
+        "uglify": true,
+        "mangle": true,
+        "sourcemaps": false
+      }
+    },
+    "e7a06f3d": {
+      "id": "e7a06f3d",
+      "pid": "5778a3ec",
+      "name": "users.js",
+      "input": "js\\users.js",
+      "customOutput": false,
+      "type": "Js",
+      "config": {
+        "autoCompile": false,
+        "uglify": true,
+        "mangle": true,
+        "sourcemaps": false
+      }
     }
   },
   "imports": {
+    "49964578": {
+      "id": "49964578",
+      "pid": "5778a3ec",
+      "path": "css\\sass\\partials\\_userlist.scss",
+      "parents": [
+        "7c23f569"
+      ]
+    },
     "84597581": {
       "id": "84597581",
       "pid": "5778a3ec",
@@ -127,18 +163,34 @@
         "7c23f569"
       ]
     },
-    "b6074ecf": {
-      "id": "b6074ecf",
-      "pid": "5778a3ec",
-      "path": "css\\sass\\partials\\_home.scss",
-      "parents": [
-        "7c23f569"
-      ]
-    },
     "d4d7a55f": {
       "id": "d4d7a55f",
       "pid": "5778a3ec",
       "path": "css\\sass\\partials\\_header.scss",
+      "parents": [
+        "7c23f569"
+      ]
+    },
+    "cdc939d2": {
+      "id": "cdc939d2",
+      "pid": "5778a3ec",
+      "path": "css\\sass\\partials\\_friendfinder.scss",
+      "parents": [
+        "7c23f569"
+      ]
+    },
+    "2385ed84": {
+      "id": "2385ed84",
+      "pid": "5778a3ec",
+      "path": "css\\sass\\partials\\_index.scss",
+      "parents": [
+        "7c23f569"
+      ]
+    },
+    "209d05e3": {
+      "id": "209d05e3",
+      "pid": "5778a3ec",
+      "path": "css\\sass\\partials\\_photos.scss",
       "parents": [
         "7c23f569"
       ]

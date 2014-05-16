@@ -1,0 +1,123 @@
+.welcome {
+	width: 420px;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+	padding: 0 $sidePadding 0 $sidePadding;
+	
+		@include breakpoint(mobile) {
+			width: 300px;
+		}
+		
+		> h1 {
+			text-align: center;
+			padding-bottom: .5rem;
+			border-bottom: 1px solid $grey;
+		}
+		
+		p.intro {
+			font-size: $baseSize - .3rem;
+			color: darken($grey, 40%);
+		}
+		
+		.register-btn, .login-btn {
+			width: 49%;
+			height: 60px;
+			display: inline-block;
+			line-height: 60px;
+			text-align: center;
+			color: $white;
+			@include no-select;
+			cursor: pointer;
+			
+				@include breakpoint(mobile) {
+					width: 100%;
+					margin-bottom: .5rem;
+				}
+				
+				&:hover {
+					@include tapped;
+				}
+		}
+		
+		.register-btn {
+			background: #00adef;
+			margin-right: 0.733%;
+		}
+		
+		.login-btn {
+			background: #7ec433;
+		}
+		
+		.confirm {
+			width: 100%;
+			height: 60px;
+			position: relative;
+			line-height: 60px;
+			padding-left: $sidePadding;
+			background: $black;
+			color: $white;
+			@include no-select;
+			cursor: pointer;
+			
+				&:hover {
+					@include tapped;
+				}
+			
+				i {
+					position: absolute;
+					top: 12px;
+					right: 14px;
+					font-size: 2.4rem;
+				}
+		}
+}
+
+#registration, #login {
+	display: none;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	
+		> h2 {
+			padding-bottom: .5rem;
+			border-bottom: 1px solid $grey;
+		}
+	
+		input {
+			width: 100%;
+			margin-bottom: .5rem;
+			font-size: $baseSize - .3rem;
+		}
+}
+
+.form-shown {
+	display: block !important;
+}
+
+.message {
+	color: #ff2a7e;
+	text-align: center;
+	display: block;
+}
+
+.plc-error::-webkit-input-placeholder {
+	color: #ff2a7e;
+}
+
+.plc-error:-moz-placeholder { /*Firefox 18*/
+   color: #ff2a7e;
+}
+
+.plc-error::-moz-placeholder {  /*Firefox 19+*/
+   color: #ff2a7e; 
+}
+
+.plc-error:-ms-input-placeholder {  
+   color: #ff2a7e; 
+}

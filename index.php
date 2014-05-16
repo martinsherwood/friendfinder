@@ -25,9 +25,11 @@ if($_POST && !empty($_POST["user"]) && !empty($_POST["password"])) {
         <link rel="dns-prefetch" href="//netdna.bootstrapcdn.com">
         
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Friend Finder</title>
+        <title>Welcome to Friend Finder</title>
         <meta name="description" content="University of Gloucestershire, Park Campus, Friend Finder App">
         <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+        
+        <?php include_once "includes/icons.php" ?>
         
         <script src="//use.typekit.net/nxl2pxo.js"></script>
 		<script>try{Typekit.load();}catch(e){}</script>
@@ -82,8 +84,6 @@ if($_POST && !empty($_POST["user"]) && !empty($_POST["password"])) {
                 
             </div>
         </div><!--/wrapper-->
-        
-        <!--<footer class="site-footer">&copy; Martin Sherwood, All Rights Reserved.</footer>-->
         
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.0.min.js"><\/script>')</script><!--fallback-->

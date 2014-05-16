@@ -1,4 +1,7 @@
 <?php
+require_once "functions/constants.php";	//require the database		
+$db = new mysqli(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME); //starts a new instance to get the photos
+
 //checks if a session is authorised or not, if it isn't the user is sent back to index.php to login
 require_once "functions/membership.php";
 $membership = new membership(); //sets up a new membership instance for this session
@@ -15,7 +18,7 @@ $membership -> confirmMember(); //calls the confirm member function that checks 
         <link rel="dns-prefetch" href="//netdna.bootstrapcdn.com">
         
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Friend Finder</title>
+        <title>Photos &amp; Images</title>
         <meta name="description" content="University of Gloucestershire, Park Campus, Friend Finder App">
         <meta name="viewport" content="width=device-width, minimum-scale=1.0">
         
@@ -36,27 +39,38 @@ $membership -> confirmMember(); //calls the confirm member function that checks 
         	
             <?php include_once "includes/header.php" ?>
             
-        	<h1>User Map</h1>
-            
-            <div id="user-map">
-            </div>
-            
-            <div id="user-actions">
-                <div class="action update-location"><span>Update Location</span><i class="fa fa-location-arrow"></i></div>
+            <div id="photo-roll">
+                <h1>User Photos</h1>
+                <div class="upload-more">Upload<i class="fa fa-camera-retro"></i></div>
                 
-                <div class="action drop-pin">Drop Pin<i class="fa fa-map-marker"></i></div>
-                
-                <div class="action upload-photos">Upload Photos<i class="fa fa-camera-retro"></i></div>
-                
-                <div class="action refresh-users">Refresh Users<i class="fa fa-refresh"></i></div>
+                <div class="photos">
+                	<?php
+						//prepares the sql statement and execute
+						if ($stmt = $db -> prepare("SELECT * FROM photos")) {
+							$stmt -> execute();
+							$stmt -> bind_result($id, $username, $filename, $caption); //binds results into variables, ready for reading
+							
+							//for each row retrieved echo out the information
+							while ($stmt -> fetch()) {
+								//this is where we build the display of the photos, using background and cover sizing for better display
+								echo "<div class=\"entry\">";
+								echo "<div class=\"img\" style=\"background:url(" . "useruploads/" . $filename . "); background-size: cover\">" . 
+										"<div class=\"by\">" . $caption .", by: <span>" . $username . "</span></div>" . //put the username in a slightly darker colour
+									 "</div>";
+								echo "</div>";
+							}
+							
+							$stmt -> close(); //closes the statement after completion
+						
+						} else {
+							echo "Error: " . $db -> error; //if it errors, go here
+							$stmt -> close();
+						}
+						
+						$db -> close(); //closes the database connection
+					?>
+                </div>
             </div>
-            
-            <div id="users-list">
-            	<h2>List</h2>
-            	<ul class="users">
-                </ul>
-            </div>
-             
         </div><!--/wrapper-->
         
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
@@ -64,6 +78,5 @@ $membership -> confirmMember(); //calls the confirm member function that checks 
 		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC6n-3I8KfH6ReeERae16W5M8B1QtzjPGc&sensor=true"></script>
 		<script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/finder.js"></script>
     </body>
 </html>

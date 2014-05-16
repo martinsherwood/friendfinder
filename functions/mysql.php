@@ -13,13 +13,15 @@ class mysql {
 	function verifyUsernamePass($username, $password) {
 				
 		$query = "SELECT * FROM users WHERE username = ? AND password = ? LIMIT 1"; //limit to 1 for security
-				
+		
+		//prepare the query
 		if($stmt = $this->conn->prepare($query)) {
 			$stmt->bind_param("ss", $username, $password); //username and password are both strings
-			$stmt->execute();
+			$stmt->execute(); //execute here
 			
+			//if result exists, fetch it
 			if($stmt->fetch()) {
-				$stmt->close();
+				$stmt->close(); //then close statement and return true (authorised)
 				return true;
 			}
 		}
