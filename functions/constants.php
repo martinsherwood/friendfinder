@@ -5,12 +5,7 @@
 
 //local
 define("DB_SERVER", "localhost");
-define("DB_USER", "root");
-define("DB_PASSWORD", "root");
-define("DB_NAME", "friendfinder");
+define("DB_USER", "");
+define("DB_PASSWORD", "");
+define("DB_NAME", "");
 
-//on server
-/*define("DB_SERVER", "localhost");
-define("DB_USER", "martinsh_1");
-define("DB_PASSWORD", "?CpqI8_Gac2=");
-define("DB_NAME", "martinsh_friendfinder");*/
